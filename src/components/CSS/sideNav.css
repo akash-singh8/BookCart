@@ -1,0 +1,56 @@
+
+#sideNav{
+    align-items: center;
+    background-color: #1D1D1D;
+    border-right: 1px solid #4E4E4E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 85px;
+}
+
+.sideNavlogo{
+    cursor: pointer;
+    margin: 40px 0 55px 0;
+    width: 46px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.sideNavlogo:hover{
+    transform: scale(1.1);
+}
+
+#sideNavMenu{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+.sideNavOptions{
+    cursor: pointer;
+    width: 34px;
+    transition: all 0.2s ease-in-out;
+    padding: 5.5px;
+}
+
+.sideNavOptions:hover{
+    transform: scale(1.12);
+    filter: invert(25%) sepia(40%) saturate(4654%) hue-rotate(359deg) brightness(102%) contrast(105%);
+    border-bottom: 4px solid white;
+    border-radius: 4px;
+}
+
+.active{
+    filter: invert(25%) sepia(40%) saturate(4654%) hue-rotate(359deg) brightness(102%) contrast(105%);
+    border-bottom: 4px solid white;
+    border-radius: 4px;
+}
+
+.active:hover{
+    border-bottom: none;
+    transform: none;
+    filter: brightness(102%);
+}
