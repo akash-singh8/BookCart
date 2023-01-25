@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CSS/sideNav.css";
 import logo from "./images/logo.png";
 import googleLogo from "./images/googleLogo.png";
@@ -8,8 +8,17 @@ import sellBooks from "./images/navigation/sellBooks.svg";
 import recommend from "./images/navigation/bookRecommend.svg";
 import about from "./images/navigation/about.svg";
 import { NavLink } from "react-router-dom";
+import { auth, signInWithGoogle } from "../firebase";
 
 function SideNav() {
+  const [pic, setPic] = useState("");
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      setPic(user.photoURL);
+    } else {
+      setPic("");
+    }
+  });
   return (
     <div id="sideNav">
       <img className="sideNavlogo" src={logo} alt="BookCart logo" />
@@ -30,12 +39,28 @@ function SideNav() {
           <img className="sideNavOptions" src={about} alt="about" />
         </NavLink>
       </div>
-      <img
-        className="sideNavlogo"
-        src={googleLogo}
-        alt="google logo"
-        title="Login or Signup using Google"
-      />
+      {pic ? (
+        <NavLink to="user">
+          <img
+            className="sideNavlogo"
+            src={pic}
+            alt="userPic"
+            title="User Profile"
+            style={{
+              borderRadius: "50%",
+              boxShadow: "0 0 15px tomato",
+            }}
+          />
+        </NavLink>
+      ) : (
+        <img
+          className="sideNavlogo"
+          src={googleLogo}
+          alt="google logo"
+          title="Login or Signup using Google"
+          onClick={signInWithGoogle}
+        />
+      )}
     </div>
   );
 }
