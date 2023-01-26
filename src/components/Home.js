@@ -9,7 +9,7 @@ function Home() {
       <div id="details">
         <h1>BOOKCART</h1>
         <h2>WHERE OLD BOOKS COME ALIVE AGAIN</h2>
-        <p>
+        <p id="homeDetailp">
           Your one-stop shop for buying and selling books. Whether you are
           looking for your next favorite read or looking to sell some of your
           gently used books, we've got you covered.

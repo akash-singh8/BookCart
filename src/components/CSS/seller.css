@@ -1,0 +1,54 @@
+#sellerInput{
+    background-color: #363636;
+    box-shadow: 0 0 12px #E86571;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    padding: 25px 30px;
+    margin-top: 40px;
+    width: 400px;
+    transition: all 0.25s ease-in-out;
+}
+
+#sellerInput:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 16px #E86571;
+}
+
+#sellerPhoneInput{
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgba(217, 217, 217, 0.1);
+    display: flex;
+    padding: 6px 0 8px 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#sellerPhoneInput input{
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 8px 15px;
+    width: 90%;
+}
+
+#sellerPhoneInput input::placeholder{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
