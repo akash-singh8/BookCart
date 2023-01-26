@@ -1,0 +1,76 @@
+
+.userInfo{
+    background-color: rgba(122, 122, 122, 0.28);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 80%;
+    height: 90%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+#userImage{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 5%;
+}
+
+#userData{
+    text-align: center;
+}
+
+#userDetails{
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#userName{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+#userId{
+    color: #2efacaf1;;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+#userEmail{
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.signButton Button{
+    background: radial-gradient(233.07% 789.28% at -7.27% 86.87%, #E38F52 0%, #7E43A6 47.42%, #5746A5 72.62%, #4B40A1 88.6%, #423A9C 100%);
+    box-shadow: 0 0 8px #B16A7C;
+    border: none;
+    border-radius: 30px;
+
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 12px 32px;
+    transition: all 0.25s ease-in-out;
+}
+
+.signButton button:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #B16A7C;
+}
+
+.signButton button:active{
+    box-shadow: 0px 0px 7px #B16A7C;
+}

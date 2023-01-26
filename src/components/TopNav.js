@@ -1,6 +1,6 @@
 import React from "react";
 import "./CSS/topNav.css";
-import search from "./images/navigation/search.svg";
+import search from "./images/SVGs/search.svg";
 
 function TopNav() {
   return (

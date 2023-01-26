@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./CSS/home.css";
 import laptop from "./images/laptop.png";
 
@@ -14,8 +15,12 @@ function Home() {
           gently used books, we've got you covered.
         </p>
         <div id="detailButtons">
-          <button>Explore</button>
-          <button>Sell Now</button>
+          <NavLink to="/category">
+            <button>Explore</button>
+          </NavLink>
+          <NavLink to="/seller">
+            <button>Sell Now</button>
+          </NavLink>
         </div>
       </div>
       <img src={laptop} alt="laptop" width={560} />

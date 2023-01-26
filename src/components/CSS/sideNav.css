@@ -8,6 +8,7 @@
     justify-content: space-between;
     height: 100vh;
     width: 85px;
+    z-index: 10;
 }
 
 .sideNavlogo{
@@ -27,30 +28,68 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 50%;
+    position: relative;
 }
 
 .sideNavOptions{
     cursor: pointer;
-    width: 34px;
+    width: 35px;
     transition: all 0.2s ease-in-out;
     padding: 5.5px;
+    fill: white;
+    border-radius: 2.5px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
 }
 
-.sideNavOptions:hover{
-    transform: scale(1.12);
-    filter: invert(25%) sepia(40%) saturate(4654%) hue-rotate(359deg) brightness(102%) contrast(105%);
-    border-bottom: 4px solid white;
-    border-radius: 4px;
+.sideNavItems::after{
+    transition: all 0.25s ease-in-out;
 }
 
-.active{
-    filter: invert(25%) sepia(40%) saturate(4654%) hue-rotate(359deg) brightness(102%) contrast(105%);
-    border-bottom: 4px solid white;
-    border-radius: 4px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.active:hover{
-    border-bottom: none;
-    transform: none;
-    filter: brightness(102%);
+.sideNavItems:hover::after {
+    animation: fadeIn 0.25s ease-in;
+    backdrop-filter: blur(5px);
+    color: orange;
+    font-family: monospace;
+    text-shadow: 0 0 10px orange;
+    padding: 8.5px 5px;
+    position: absolute;
+}
+
+#nav_home:hover::after{
+    font-size: 14px;
+    content: "Home";
+    left: -2px;
+
+}
+#nav_category:hover::after{
+    content: "Category";
+    left: -16px;
+}
+#nav_seller:hover::after{
+    content: "Seller";
+    left: -8px;
+
+}
+#nav_recommend:hover::after{
+    content: "Recommend";
+    left: -19px;
+    top: 232px;
+
+}
+#nav_about:hover::after{
+    font-size: 13.5px;
+    content: "About";
+    left: -5.5px;
+
+}
+
+.active .sideNavOptions{
+    border-bottom: 4px solid orange;
+    fill: orange;
+    transform: scale(1.1);
 }
