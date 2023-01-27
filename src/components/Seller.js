@@ -8,7 +8,7 @@ function Seller() {
     <section id="home">
       <div id="details">
         <h1>SELL BOOKS</h1>
-        <h2>MAKE YOUR BOOK ALIVE AGAIN</h2>
+        <h2 className="gradient_head">MAKE YOUR BOOK ALIVE AGAIN</h2>
         <div id="sellerInput">
           <p>Verify to become a seller</p>
           <div id="sellerPhoneInput">

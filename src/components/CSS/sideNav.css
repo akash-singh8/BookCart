@@ -53,9 +53,9 @@
 .sideNavItems:hover::after {
     animation: fadeIn 0.25s ease-in;
     backdrop-filter: blur(5px);
-    color: orange;
+    color: #FFA700;
     font-family: monospace;
-    text-shadow: 0 0 10px orange;
+    text-shadow: 0 0 10px #FFA700;
     padding: 8.5px 5px;
     position: absolute;
 }
@@ -89,7 +89,7 @@
 }
 
 .active .sideNavOptions{
-    border-bottom: 4px solid orange;
-    fill: orange;
+    border-bottom: 4px solid #FFA700;
+    fill: #FFA700;
     transform: scale(1.1);
 }

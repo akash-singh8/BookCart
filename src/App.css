@@ -22,3 +22,18 @@ section{
   height: calc(100vh - 60px);
   padding: 20px;
 }
+
+.gradient_head{
+  background: radial-gradient(146.74% 34539.46% at 148.37% 48.49%, #8972F2 0%, #D18DFF 59.45%, #FD8198 93.76%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 15px;
+  text-shadow: 0px 0px 25px #A448C5;
+  transition: all 0.25s ease-in-out;
+}
+
+.gradient_head:hover{
+  transform: scale(1.02);
+  text-shadow: 0px 0px 45px #e031ed;
+}

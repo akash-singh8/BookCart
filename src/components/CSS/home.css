@@ -12,23 +12,6 @@
     font-weight: 500;
 }
 
-#details h2{
-    background: radial-gradient(146.74% 34539.46% at 148.37% 48.49%, #8972F2 0%, #D18DFF 59.45%, #FD8198 93.76%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: bold;
-    font-size: 1.3em;
-    margin-top: 15px;
-    text-shadow: 0px 0px 25px #A448C5;
-    transition: all 0.25s ease-in-out;
-}
-
-#details h2:hover{
-    transform: scale(1.02);
-    text-shadow: 0px 0px 45px #e031ed;
-}
-
 #homeDetailp{
     background-color: #363636;
     box-shadow: 0 0 12px #E86571;

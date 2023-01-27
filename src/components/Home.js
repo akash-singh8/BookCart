@@ -8,7 +8,7 @@ function Home() {
     <section id="home">
       <div id="details">
         <h1>BOOKCART</h1>
-        <h2>WHERE OLD BOOKS COME ALIVE AGAIN</h2>
+        <h2 className="gradient_head">WHERE OLD BOOKS COME ALIVE AGAIN</h2>
         <p id="homeDetailp">
           Your one-stop shop for buying and selling books. Whether you are
           looking for your next favorite read or looking to sell some of your

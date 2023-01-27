@@ -1,0 +1,96 @@
+
+.bookWebPage h1{
+    font-size: 1.8em;
+    user-select: none;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+.bookWebPage h1:hover{
+    transform: none;
+}
+
+.boxAndLogo{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#book_recommend{
+    background-color: #363636;
+    box-shadow: 0 0 12px #E86571;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.3em;
+    letter-spacing: 0.4px;
+    padding: 25px 30px;
+    margin: 35px 0;
+    width: 70%;
+    transition: all 0.25s ease-in-out;
+}
+
+#book_recommend:hover{
+    transform: scale(1.003);
+    box-shadow: 0 0 14px #E86571;
+}
+
+#book_recommend_input{
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgba(217, 217, 217, 0.1);
+    display: flex;
+    padding: 7px 18px;
+    margin: 18px 5px;
+}
+
+#book_recommend_input input{
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+    outline: none;
+    padding: 7px 18px;
+    width: 90%;
+}
+
+#book_recommend_input input::placeholder{
+    color: #909090;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+#book_recommend button{
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: #F47960;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+    padding: 9px 20px;
+    margin: 3px 0 7px 7px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#book_recommend button:hover{
+    box-shadow: 0 0 12px #F47960;
+}
+
+#book_recommend button:active{
+    box-shadow: 0 0 5px #F47960;
+}
+
+#book_recommend button:disabled{
+    background-color: rgba(217, 217, 217, 0.1);
+    color: rgb(176, 176, 176);
+    box-shadow: none;
+    cursor: default;
+}
