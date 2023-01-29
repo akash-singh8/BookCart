@@ -15,7 +15,7 @@ function Home() {
           gently used books, we've got you covered.
         </p>
         <div id="detailButtons">
-          <NavLink to="/category">
+          <NavLink to="/category/science">
             <button>Explore</button>
           </NavLink>
           <NavLink to="/seller">

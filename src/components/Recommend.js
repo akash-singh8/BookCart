@@ -9,7 +9,7 @@ function Recommend() {
     <section className="bookWebPage">
       <h1 className="gradient_head">Get Book Recommendation</h1>
       <div className="boxAndLogo">
-        <div id="book_recommend">
+        <div id="book_recommend" className="books_box">
           <p>Find your next read</p>
           <div id="book_recommend_input">
             <img src={recImg} alt="book icon" width={28} />

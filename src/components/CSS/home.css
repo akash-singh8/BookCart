@@ -34,8 +34,9 @@
 #detailButtons{
     align-items: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 55px;
+    width: 85%;
 }
 
 #detailButtons button{
@@ -50,7 +51,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     letter-spacing: 0.5px;
-    padding: 12px 32px;
+    padding: 14px 32px;
     transition: all 0.25s ease-in-out;
 }
 

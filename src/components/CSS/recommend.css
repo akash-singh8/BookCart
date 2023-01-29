@@ -17,7 +17,7 @@
     justify-content: space-evenly;
 }
 
-#book_recommend{
+.books_box{
     background-color: #363636;
     box-shadow: 0 0 12px #E86571;
     border-radius: 12px;
@@ -25,12 +25,12 @@
     font-size: 1.3em;
     letter-spacing: 0.4px;
     padding: 25px 30px;
-    margin: 35px 0;
+    margin: 40px 0;
     width: 70%;
     transition: all 0.25s ease-in-out;
 }
 
-#book_recommend:hover{
+.books_box:hover{
     transform: scale(1.003);
     box-shadow: 0 0 14px #E86571;
 }

@@ -18,7 +18,8 @@ function App() {
           <TopNav />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="category" element={<Category />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/category/:catId" element={<Category />} />
             <Route path="seller" element={<Seller />} />
             <Route path="recommend" element={<Recommend />} />
             <Route path="about" element={<About />} />
