@@ -1,14 +1,14 @@
 #sellerInput{
-    background-color: #363636;
+    background-color: rgba(255, 255, 255, 0.05);;
     box-shadow: 0 0 12px #E86571;
     border-radius: 12px;
     font-weight: 500;
     font-size: 1.2em;
     letter-spacing: 0.4px;
     line-height: 24px;
-    padding: 25px 30px;
+    padding: 25px 35px;
     margin-top: 40px;
-    width: 400px;
+    width: 420px;
     transition: all 0.25s ease-in-out;
 }
 
@@ -20,7 +20,7 @@
 #sellerPhoneInput{
     align-items: center;
     border-radius: 8px;
-    background-color: rgba(217, 217, 217, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
     display: flex;
     padding: 6px 0 8px 12px;
     margin-top: 25px;

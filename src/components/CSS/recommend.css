@@ -18,8 +18,8 @@
 }
 
 .books_box{
-    background-color: #363636;
-    box-shadow: 0 0 12px #E86571;
+    background-color: rgba(255, 255, 255, 0.05);;
+    box-shadow: 0 0 8px #E86571;
     border-radius: 12px;
     font-weight: 500;
     font-size: 1.3em;
@@ -32,13 +32,13 @@
 
 .books_box:hover{
     transform: scale(1.003);
-    box-shadow: 0 0 14px #E86571;
+    box-shadow: 0 0 12px #E86571;
 }
 
 #book_recommend_input{
     align-items: center;
     border-radius: 8px;
-    background-color: rgba(217, 217, 217, 0.1);
+    background-color: rgba(255, 255, 255, 0.06);
     display: flex;
     padding: 7px 18px;
     margin: 18px 5px;
@@ -89,7 +89,7 @@
 }
 
 #book_recommend button:disabled{
-    background-color: rgba(217, 217, 217, 0.1);
+    background-color: rgb(255, 255, 255, 0.1);
     color: rgb(176, 176, 176);
     box-shadow: none;
     cursor: default;

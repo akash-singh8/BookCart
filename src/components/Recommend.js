@@ -17,7 +17,7 @@ function Recommend() {
               type="text"
               value={bookInput}
               onChange={(e) => setBookInput(e.target.value)}
-              placeholder="Enter at least 2 category or book names separated by comma(,)"
+              placeholder="Enter any category or book_name or author"
             />
           </div>
           <button disabled={bookInput.length === 0}>Recommend Books</button>

@@ -7,7 +7,7 @@
 }
 
 body{
-  background-color: #2C2C2C;
+  background-color: #252232;
   color: white;
   font-family: 'Ubuntu', sans-serif;
 
@@ -19,7 +19,7 @@ body{
 
 section{
   width: calc(100vw - 80px);
-  height: calc(100vh - 60px);
+  height: calc(100vh - 45px);
   padding: 20px;
 }
 
