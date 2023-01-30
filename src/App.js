@@ -8,6 +8,9 @@ import UserInfo from "./components/UserInfo";
 import Seller from "./components/Seller";
 import Recommend from "./components/Recommend";
 import About from "./components/About";
+import Terms from "./components/Terms";
+import Privacy from "./components/Privacy";
+import Safety from "./components/Safety";
 
 function App() {
   return (
@@ -18,11 +21,14 @@ function App() {
           <TopNav />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category" element={<Category />} />
-            <Route path="/category/:catId" element={<Category />} />
+            <Route path="category" element={<Category />} />
+            <Route path="category/:catId" element={<Category />} />
             <Route path="seller" element={<Seller />} />
             <Route path="recommend" element={<Recommend />} />
             <Route path="about" element={<About />} />
+            <Route path="about/terms&condition" element={<Terms />} />
+            <Route path="about/privacy-policy" element={<Privacy />} />
+            <Route path="about/safety-remarks" element={<Safety />} />
             <Route path="user" element={<UserInfo />} />
           </Routes>
         </div>

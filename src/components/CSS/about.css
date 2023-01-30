@@ -98,3 +98,16 @@
     border-radius: 4px;
     background: #555;
 }
+
+.aboutContent li{
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    margin-bottom: 21px;
+}
+
+.aboutContent li span{
+    font-weight: bold;
+    font-size: 18px;
+}
