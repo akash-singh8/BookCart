@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     row-gap: 20px;
     width: 67%;
-    margin-top: 18px;
+    margin-top: 25px;
 }
 
 .books_category{
@@ -39,9 +39,68 @@
 
 #bookByCategoryHead{
     align-items: center;
-    display: flex;
-    font-weight: bold;
-    font-size: 1.8em;
     column-gap: 10px;
-    margin-left: 15px;
+    display: flex;
+    font-weight: 500;
+    font-size: 1.65em;
+    letter-spacing: 1px;
+    margin-left: 14px;
+}
+
+#bookByCategoryHead img{
+    width: 38px;
+}
+
+
+#bookByCategory{
+    display: flex;
+    padding: 20px;
+}
+
+.bookOverview{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+    padding: 15px 5px;
+    margin-left: 45px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+.bookOverview:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 6px #5e509b;
+}
+
+.bookOverview img{
+    border-radius: 8px;
+    box-shadow: 0 0 20px #252232;
+    width: 80%;
+    height: 210px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.bookOverview h2{
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.bookOverview button{
+    border: none;
+    border-radius: 5px;
+    background-color: #F47960;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: 85%;
+    padding: 6px 0;
+    margin-top: 10px;
 }

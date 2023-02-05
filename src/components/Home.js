@@ -14,7 +14,7 @@ function Home() {
           looking for your next favorite read or looking to sell some of your
           gently used books, we've got you covered.
         </p>
-        <div id="detailButtons">
+        <div className="detailButtons">
           <NavLink to="/category/science">
             <button>Explore</button>
           </NavLink>

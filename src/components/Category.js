@@ -1,33 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./CSS/category.css";
 import categoryLogo from "./images/category.png";
 import science from "./images/Categories/science.png";
 import programming from "./images/Categories/programming.png";
 import math from "./images/Categories/math.png";
-import biography from "./images/Categories/biography.png";
+import literature from "./images/Categories/literature.png";
 import novel from "./images/Categories/novel.png";
+import growth from "./images/Categories/growth.png";
 import { NavLink, useParams } from "react-router-dom";
+import { db } from "../firebase";
 
-function Category() {
+function Category({ books }) {
   const { catId } = useParams();
-  document.addEventListener("hover", () => {
-    console.log("Loaded");
-    document.querySelector("#nav_category").style = {
-      borderBottom: "4px solid #FFA700",
-      fill: "#FFA700",
-      transform: "scale(1.1)",
-    };
-  });
-  // {{    borderBottom: "4px solid #FFA700",
-  //   fill: "#FFA700",
-  //   transform: "scale(1.1)",}};
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    db.collection("categories")
+      .doc(catId)
+      .get()
+      .then((doc) => setCategory(doc.data()?.books));
+  }, [catId]);
+
+  console.log(category);
 
   const categoryImg = {
     science: science,
     programming: programming,
     mathematics: math,
+    growth: growth,
     novel: novel,
-    biography: biography,
+    literature: literature,
   };
 
   return (
@@ -47,19 +48,23 @@ function Category() {
             <img src={math} alt="Mathematics" />
             <p>Mathematics</p>
           </NavLink>
+          <NavLink to="/category/growth" className="books_category">
+            <img src={growth} alt="Growth" />
+            <p>Growth</p>
+          </NavLink>
           <NavLink to="/category/novel" className="books_category">
             <img src={novel} alt="Novel" />
             <p>Novel</p>
           </NavLink>
-          <NavLink to="/category/biography" className="books_category">
-            <img src={biography} alt="Biography" />
-            <p>Biography</p>
+          <NavLink to="/category/literature" className="books_category">
+            <img src={literature} alt="Literature" />
+            <p>Literature</p>
           </NavLink>
         </div>
         <img
           src={categoryLogo}
           alt="recommend logo"
-          width={320}
+          width={300}
           style={{ marginTop: "-25px" }}
         />
       </div>
@@ -68,13 +73,28 @@ function Category() {
         {catId ? (
           <div id="bookByCategoryHead">
             <img src={categoryImg[catId.toLowerCase()]} alt={catId} />
-            <p>{catId[0].toUpperCase() + catId.substring(1)} books</p>
+            <p>{catId[0].toUpperCase() + catId.substring(1)}</p>
           </div>
         ) : (
-          <h1>Select any category to browse books</h1>
+          <h2>Select any category to browse books</h2>
         )}
 
-        <div id="bookByCategory"></div>
+        <div id="bookByCategory">
+          {category?.map((id) => {
+            let bName = books[id]?.name;
+            if (bName?.length > 21) {
+              bName = bName.substring(0, 20) + "...";
+            }
+
+            return (
+              <NavLink to={`/book/${id}`} className="bookOverview">
+                <img src={books[id]?.bookFront} alt="book" />
+                <h2>{bName}</h2>
+                <button>₹{books[id]?.price}</button>
+              </NavLink>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,215 @@
+
+.bookDetailSection{
+    padding: 35px 55px;
+}
+
+.bookDetailsContainer{
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+    height: 100%;
+}
+
+.bookDetailsImages{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 37%;
+    margin-left: 2%;
+    min-width: 480px;
+}
+
+.currentBookPage{
+    border-radius: 8px;
+    box-shadow: 0 0 40px #252232;
+    width: 310px;
+}
+
+.bookDetailsImagesOption{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.bookOptionImage{
+    border-radius: 3px;
+    box-shadow: 0 0 10px #252232;
+    cursor: pointer;
+    width: 52px;
+    transition: all 0.25s ease-in-out;
+}
+
+.bookDetailImageActive{
+    border: 1px solid #8b71ff;
+    box-shadow: 0 0 10px #8b71ff;
+    transform: scale(1.2);
+}
+
+.bookDetailDivider{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1px;
+    width: 2.5px;
+    height: 80%;
+    margin-left: 3%;
+}
+
+.bookDetailsAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    padding-left: 80px;
+    padding-top: 15px;
+    width: 52%;
+    padding-bottom: 2%;
+    height: 100%;
+}
+
+.bookDetailsAbout h1{
+    font-size: 1.8em;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.bookDetailsUser{
+    align-items: center;
+    column-gap: 60px;
+    display: flex;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.bookDetailsUser span{
+    color: #FFA700;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bookDetailsUserLocation{
+    align-items: center;
+    column-gap: 6px;
+    display: flex;
+}
+.bookDetailsUserLocation img{
+    width: 28px;
+}
+
+.bookDetailsPrice{
+    align-items: center;
+    display: flex;
+    column-gap: 60px;
+    letter-spacing: 0.4px;
+    margin-top: 22px;
+}
+
+.bookDetailsCurrPrice{
+    align-items: center;
+    display: flex;
+    column-gap: 3px;
+    font-size: 1.4em;
+}
+.bookDetailsCurrPrice img{
+    width: 30px;
+}
+
+.bookDetailsPrice p{
+    cursor: pointer;
+}
+
+.bookDetailsDescription{
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+}
+.bookDetailsDescription h3{
+    font-size: 1.3em;
+}
+.bookDetailsDescription h3:hover{
+    transform: none;
+}
+.bookDetailsDescription p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 10px 40px 0 18px;
+}
+
+.bookDetailsOthers{
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 15px 25px;
+    letter-spacing: 0.5px;
+    line-height: 23px;
+    margin-top: 35px;
+    margin-right: 60px;
+}
+
+.bookDetailsOthers span{
+    display: inline-block;
+    width: 145px;
+}
+
+.bookDetailUserConnect{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    width: 90%;
+}
+
+.bookDetailUserConnect a{
+    text-decoration: none;
+}
+
+.bookDuserConnect{
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    column-gap: 10px;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    text-align: start;
+    padding: 10px 35px 10px 30px;
+    transform: scale(0.95);
+    transition: all 0.25s ease-in-out;
+}
+
+.bookDuserConnect:hover{
+    transform: scale(1);
+}
+
+.bookDuserConnect:active{
+    transform: scale(0.96);
+}
+
+.bookDuserConnect span{
+    display: block;
+    font-size: 18px;
+    padding-top: 1px;
+}
+
+.bookDuserConnect img{
+    width: 38px;
+}
+
+.whatsappConnect{
+    background-color: #33E174;
+}
+.whatsappConnect:hover{
+    box-shadow: 0 0 14px #33E174;
+}
+
+.telegramConnect{
+    background-color: #29B6F6;
+    padding-right: 42px;
+}
+.telegramConnect:hover{
+    box-shadow: 0 0 14px #29B6F6;
+}
