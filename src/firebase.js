@@ -5,6 +5,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import "firebase/compat/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDt3FxzF1AJwPOi8G5nOl9DgILtkqyQMYU",
@@ -39,4 +40,6 @@ const logOut = () => {
   localStorage.clear();
 };
 
-export { auth, signInWithGoogle, logOut };
+const db = app.firestore();
+
+export { auth, signInWithGoogle, logOut, db };
