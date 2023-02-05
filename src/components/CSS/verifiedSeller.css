@@ -1,0 +1,209 @@
+
+#vSellerHead{
+    cursor: default;
+    font-size: 2em;
+    padding-left: 25px;
+    background-color: gray;
+}
+
+#vSellerHead:hover{
+    transform: none;
+}
+
+#vSellerUploadBook{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    height: 90%;
+}
+
+#vSellerBookPhotos{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 28px 15px;
+    width: 420px;
+    height: 75%;
+}
+
+#vSellerBookPhotos > p{
+    font-size: 1.2em;
+    margin: 4px 0 15px 14px
+}
+
+.vSellerBookPhotosMain{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 44%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.UploadBookImage{
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+    padding: 20px 0;
+    width: 33%;
+    transition: all 0.25s ease-in-out;
+}
+
+.UploadBookImage img{
+    border-radius: 6px;
+    height: 75px;
+}
+
+.UploadBookImage:hover{
+    box-shadow: 0 0 20px #252232af;
+    transform: scale(1.05);
+}
+
+.UploadBookImage:active{
+    box-shadow: 0 0 10px #252232af;
+    transform: scale(1.03);
+}
+
+#vSellerDivider{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1px;
+    width: 2.5px;
+    height: 70%;
+}
+
+#vSellerBookDetails{
+    position: relative;
+    width: 37%;
+    margin-right: 2%;
+}
+
+#bookDetailsHead{
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+#bookDetailsHead img{
+    cursor: pointer;
+}
+
+#bookDetailHeadMenu{
+    align-items: center;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    background-color: #252232;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px #252232;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 195px;
+    height: 180px;
+    position: absolute;
+    top: -4px;
+    right: 30px;
+    display: none;
+}
+
+#bookDetailHeadMenu div{
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgb(220, 220, 220);
+    border-radius: 8px;
+    column-gap: 10px;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 7px 17px;
+    width: 80%;
+    transition: all 0.25s ease-in-out;
+}
+
+#bookDetailHeadMenu div:hover{
+    color: rgb(235, 235, 235);
+    transform: scale(1.05);
+}
+
+#bookDetailHeadMenu div:active{
+    transform: scale(1);
+}
+
+#bookDetailHeadMenu h3{
+    margin-top: -6px;
+    width: 80%;
+    font-weight: 500;
+    text-align: left;
+}
+
+#vSellerBookDetails input{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    outline: none;
+}
+
+#vSellerBookDetails input::placeholder{
+    color: rgb(255, 255, 255, 0.44);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#vSellerBookDetails img{
+    width: 28px;
+}
+
+.bookInputBox, #bookInputCategory{
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.14);
+    border-radius: 6px;
+    column-gap: 10px;
+    display: flex;
+    padding: 7px 15px;
+    margin: 14px 0;
+}
+
+.bookInputBox span{
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 4%;
+}
+
+.bookInputRow{
+    display: flex;
+    justify-content: space-between;
+}
+.bookInputRow .bookInputBox{
+    width: 46%;
+}
+
+.bookInputRow input{
+    width: 100%;
+}
+
+#bookInputCategory{
+    color: rgba(255, 255, 255, 0.44);
+    padding: 6px 15px;
+}
+
+#bookInputCategory select{
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 9px 50px;
+    margin-left: 20%;
+}
