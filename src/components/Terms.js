@@ -7,7 +7,7 @@ function Terms() {
     <section className="bookWebPage">
       <h1 className="gradient_head">
         <NavLink to="/about">
-          <span style={{ fontSize: "20px" }}>&#x25c0;</span>&nbsp; Terms and
+          <span style={{ fontSize: "20px" }}>&#8592;</span>&nbsp; Terms and
           Conditions
         </NavLink>
       </h1>

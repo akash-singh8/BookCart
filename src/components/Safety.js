@@ -7,8 +7,7 @@ function Safety() {
     <section className="bookWebPage">
       <h1 className="gradient_head">
         <NavLink to="/about">
-          <span style={{ fontSize: "20px" }}>&#x25c0;</span>&nbsp; Safety
-          Remarks
+          <span style={{ fontSize: "20px" }}>&#8592;</span>&nbsp; Safety Remarks
         </NavLink>
       </h1>
       <ul className="aboutContent">
