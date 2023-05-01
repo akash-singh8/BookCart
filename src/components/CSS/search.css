@@ -1,0 +1,30 @@
+
+#searchResult > h1{
+    font-size: 1.8em;
+    margin-left: 22px;
+    transform: none;
+}
+
+#resultBox{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 28px 10px;
+    margin: 25px 40px;
+}
+
+#resultBox > h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 26px;
+    margin-left: 20px;
+}
+
+#resultBox > div{
+    display: flex;
+}
+
+#resultBox .bookOverview{
+    margin-left: 34px;
+    margin-bottom: 24px;
+}
