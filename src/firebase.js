@@ -6,6 +6,7 @@ import {
   signOut,
 } from "firebase/auth";
 import "firebase/compat/firestore";
+import "firebase/compat/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDt3FxzF1AJwPOi8G5nOl9DgILtkqyQMYU",
@@ -22,24 +23,15 @@ const app = firebase.initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+const db = app.firestore();
+const storage = firebase.storage();
+
 const signInWithGoogle = () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const user = result.user;
-      localStorage.setItem("userName", user.displayName);
-      localStorage.setItem("email", user.email);
-      localStorage.setItem("photo", user.photoURL);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  signInWithPopup(auth, provider);
 };
 
 const logOut = () => {
   signOut(auth);
-  localStorage.clear();
 };
 
-const db = app.firestore();
-
-export { auth, signInWithGoogle, logOut, db };
+export { auth, signInWithGoogle, logOut, db, storage };
