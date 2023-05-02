@@ -102,6 +102,31 @@ function UserInfo({ books, currUser, userData }) {
             ) : (
               ""
             )}
+            {userDetail?.verified ? (
+              <div className="userBooks">
+                <h1>Books to sell</h1>
+                <div>
+                  {userDetail?.bookToSell?.map((id) => {
+                    let bName = books[id]?.name;
+                    if (bName?.length > 21) {
+                      bName = bName.substring(0, 20) + "...";
+                    }
+                    return (
+                      <NavLink
+                        to={`/book/${id}`}
+                        className="bookOverview"
+                        target="_blank">
+                        <img src={books[id]?.bookFront} alt="book" />
+                        <h2>{bName}</h2>
+                        <button>₹{books[id]?.price}</button>
+                      </NavLink>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </>
       ) : (
