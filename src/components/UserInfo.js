@@ -79,6 +79,30 @@ function UserInfo({ books, currUser, userData }) {
               </div>
             </div>
           </div>
+          <div id="userBookDetail">
+            {userId === currUser ? (
+              <div className="userBooks">
+                <h1>Wishlist</h1>
+                <div>
+                  {userDetail?.wishlist?.map((id) => {
+                    let bName = books[id]?.name;
+                    if (bName?.length > 21) {
+                      bName = bName.substring(0, 20) + "...";
+                    }
+                    return (
+                      <NavLink to={`/book/${id}`} className="bookOverview">
+                        <img src={books[id]?.bookFront} alt="book" />
+                        <h2>{bName}</h2>
+                        <button>₹{books[id]?.price}</button>
+                      </NavLink>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
         </>
       ) : (
         <img className="pageNotFound" src={pageNotFound} alt="page not found" />
