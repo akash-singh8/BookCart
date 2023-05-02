@@ -1,76 +1,110 @@
 
-.userInfo{
-    background-color: rgba(122, 122, 122, 0.28);
+#userInfoHead{
+    font-size: 1.8em;
+    margin-left: 28px;
+    margin-bottom: 24px;
+}
+
+#userInfoHead:hover{
+    transform: none;
+}
+
+#userInfoDetails{
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     display: flex;
+    column-gap: 48px;
+    margin-left: 48px;
+    margin-right: 10%;
+    padding: 22px 45px;
+}
+
+#userLogout{
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 80%;
-    height: 90%;
-    margin-left: 10%;
-    margin-top: 2%;
+    justify-content: center;
 }
 
-#userImage{
-    width: 120px;
-    height: 120px;
+#userLogout img{
     border-radius: 50%;
-    margin-bottom: 5%;
+    box-shadow: 0 0 10px 2px #252232;
+    width: 105px;
+    margin-bottom: 14px;
 }
 
-#userData{
-    text-align: center;
+#userLogout button{
+    background-color: #F47960;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 7px 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+#userLogout button:hover{
+    background-color: #fe6a4d;
+    transform: translateY(-1px);
 }
 
 #userDetails{
-    height: 110px;
+    column-gap: 28px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
-#userName{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-}
 
-#userId{
-    color: #2efacaf1;;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-#userEmail{
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.signButton Button{
-    background: radial-gradient(233.07% 789.28% at -7.27% 86.87%, #E38F52 0%, #7E43A6 47.42%, #5746A5 72.62%, #4B40A1 88.6%, #423A9C 100%);
-    box-shadow: 0 0 8px #B16A7C;
-    border: none;
-    border-radius: 30px;
-
-    color: white;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+.userInfoData{
+    align-items: center;
+    background-color: #252232;
+    box-shadow: inset 0 -0.4px 5px #9383dc;
+    border-radius: 6px;
+    column-gap: 12px;
+    display: flex;
     letter-spacing: 0.5px;
-    padding: 12px 32px;
-    transition: all 0.25s ease-in-out;
+    padding: 8px 28px 8px 20px;
+    margin-bottom: 18px;
+    margin-top: 8px;
+}   
+
+.userInfoData img{
+    width: 28px;
 }
 
-.signButton button:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #B16A7C;
+#userBookDetail{
+    display: flex;
+    justify-content: space-between;
 }
 
-.signButton button:active{
-    box-shadow: 0px 0px 7px #B16A7C;
+.userBooks{
+    margin-top: 35px;
+    margin-right: 40px;
+    width: 45%;
+}
+.userBooks h1{
+    margin: 0 0 -4px 48px
+}
+
+.userBooks > div{
+    display: flex;
+    margin-left: 32px;
+}
+
+
+.userBooks .bookOverview{
+    transform:scale(0.85);
+    margin-left: 4px;
+}
+
+.userBooks .bookOverview:hover{
+    transform: scale(0.9);
+}
+
+.pageNotFound{
+    height: 75%;
+    width: 100%;
+    object-fit: contain;
 }
