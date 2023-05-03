@@ -95,3 +95,26 @@
     box-shadow: none;
     cursor: default;
 }
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 850px) {
+    .boxAndLogo{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+    }
+
+    .boxAndLogo > img{
+        margin-bottom: -6px;
+        margin-top: 20px;
+        z-index: 5;
+    }
+
+    .books_box{
+        margin: 0;
+        width: 98%;
+    }
+}
