@@ -51,7 +51,7 @@
 
 .sideNavItems:hover::after {
     animation: fadeIn 0.25s ease-in;
-    backdrop-filter: blur(5px);
+    background-color: #322f3e;
     color: #FFA700;
     font-family: monospace;
     text-shadow: 0 0 10px #FFA700;
@@ -77,8 +77,6 @@
 #nav_recommend:hover::after{
     content: "Recommend";
     left: -19px;
-    top: 232px;
-
 }
 #nav_about:hover::after{
     font-size: 13.5px;
@@ -90,5 +88,4 @@
 .active .sideNavOptions{
     border-bottom: 4px solid #FFA700;
     fill: #FFA700;
-    transform: scale(1.1);
 }
