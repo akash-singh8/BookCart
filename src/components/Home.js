@@ -6,7 +6,7 @@ import laptop from "./images/laptop.png";
 function Home() {
   return (
     <section id="home">
-      <div id="details">
+      <div id="homePagedetails">
         <h1>BOOKCART</h1>
         <h2 className="gradient_head">WHERE OLD BOOKS COME ALIVE AGAIN</h2>
         <p id="homeDetailp">
@@ -23,7 +23,7 @@ function Home() {
           </NavLink>
         </div>
       </div>
-      <img src={laptop} alt="laptop" width={560} />
+      <img src={laptop} alt="laptop" />
     </section>
   );
 }
