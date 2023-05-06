@@ -83,11 +83,16 @@
     font-size: 14px;
     margin-top: 10px;
 }
-.bookDetailsUser span{
+.bookDetailsUserInfo{
     color: #FFA700;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
+}
+
+.bookDetailsUserInfo:hover{
     text-decoration: underline;
+
 }
 
 .bookDetailsUserLocation{
@@ -175,8 +180,10 @@
     display: flex;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
+    justify-content: center;
     text-align: start;
-    padding: 10px 35px 10px 30px;
+    padding: 10px 0;
+    min-width: 180px;
     transform: scale(0.95);
     transition: all 0.25s ease-in-out;
 }
@@ -189,6 +196,10 @@
     transform: scale(0.96);
 }
 
+.bookDuserConnect p{
+    width: 60%;
+}
+
 .bookDuserConnect span{
     display: block;
     font-size: 18px;
@@ -196,19 +207,19 @@
 }
 
 .bookDuserConnect img{
-    width: 38px;
+    margin-left: 10%;
+    width: 20%;
 }
 
-.whatsappConnect{
-    background-color: #33E174;
+.wishlist{
+    background-color: #E86571;
 }
-.whatsappConnect:hover{
-    box-shadow: 0 0 14px #33E174;
+.wishlist:hover{
+    box-shadow: 0 0 14px #E86571;
 }
 
 .telegramConnect{
     background-color: #29B6F6;
-    padding-right: 42px;
 }
 .telegramConnect:hover{
     box-shadow: 0 0 14px #29B6F6;

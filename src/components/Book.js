@@ -5,7 +5,7 @@ import rupeeIcon from "./images/Books/rupee.png";
 import wishlistIcon from "./images/Books/wishlist.png";
 import removeIcon from "./images/Books/remove.png";
 import telegramIcon from "./images/Books/TelegramIcon.png";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 import { db } from "../firebase";
 
@@ -100,7 +100,13 @@ function Book({ books, wishlist, setWishlist, user }) {
             </div>
             <ul>
               <li>
-                Sold by <span>{book?.seller}</span>
+                Sold by&nbsp;
+                <NavLink
+                  to={`/user/${book?.sellerId}`}
+                  target="_blank"
+                  className="bookDetailsUserInfo">
+                  {book?.seller}
+                </NavLink>
               </li>
             </ul>
           </div>
