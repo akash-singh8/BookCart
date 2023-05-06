@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./CSS/book.css";
 import locationIcon from "./images/Books/locationIcon.png";
 import rupeeIcon from "./images/Books/rupee.png";
-import whatsappIcon from "./images/Books/WhatsAppIcon.png";
+import wishlistIcon from "./images/Books/wishlist.png";
+import removeIcon from "./images/Books/remove.png";
 import telegramIcon from "./images/Books/TelegramIcon.png";
 import { useParams } from "react-router-dom";
 
-function Book({ books }) {
-  const bookId = parseInt(useParams().bookId);
+import { db } from "../firebase";
 
-  if (books[bookId] === undefined) {
-    console.log("Not such book is available");
+function Book({ books, wishlist, setWishlist, user }) {
+  const bookId = parseInt(useParams().bookId);
+  if (wishlist?.includes(bookId)) {
+    console.log("Book already in user wishlist");
+  } else {
+    console.log("Book not in user wishlist");
   }
+
   console.log("bookId :", bookId);
 
   const [book, setBook] = useState({});
@@ -32,6 +37,26 @@ function Book({ books }) {
       });
     });
   }, [bookId, books]);
+
+  function onClickWishlist() {
+    const index = wishlist?.indexOf(bookId);
+    if (index > -1) {
+      setWishlist((prevWishlist) => {
+        const newWishList = prevWishlist.filter((id) => id !== bookId);
+        db.collection("users").doc(user).update({ wishlist: newWishList });
+        return newWishList;
+      });
+      console.log("Book removed from wishlist");
+    } else {
+      setWishlist((prevWishlist) => {
+        const newWishList = [...prevWishlist, bookId];
+        db.collection("users").doc(user).update({ wishlist: newWishList });
+        return newWishList;
+      });
+      console.log("Book added to wishlist");
+    }
+    console.log("Wishlist Updated : ", wishlist);
+  }
 
   return (
     <section className="bookDetailSection">
@@ -103,22 +128,9 @@ function Book({ books }) {
           </div>
           <div className="bookDetailUserConnect">
             <a
-              href={`https://wa.me/+91${book?.whatsapp}?text=Hello,%20I%20would%20like%20to%20buy%20the%20book%20${book?.name}.%0AFrom%20BookCart.`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="bookDuserConnect whatsappConnect">
-                <img src={whatsappIcon} alt="whatsapp" />
-                <p>
-                  Connect on <span>WhatsApp</span>
-                </p>
-              </button>
-            </a>
-            <a
               href={`https://t.me/${book?.telegram}`}
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               <button className="bookDuserConnect telegramConnect">
                 <img src={telegramIcon} alt="telegram" />
                 <p>
@@ -126,6 +138,18 @@ function Book({ books }) {
                 </p>
               </button>
             </a>
+            <button
+              className="bookDuserConnect wishlist"
+              onClick={onClickWishlist}>
+              <img
+                src={wishlist?.includes(bookId) ? removeIcon : wishlistIcon}
+                alt="wishlist"
+              />
+              <p>
+                {wishlist?.includes(bookId) ? "Remove from" : "Add to"}
+                <span>Wishlist</span>
+              </p>
+            </button>
           </div>
         </div>
       </div>
