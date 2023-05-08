@@ -123,6 +123,10 @@ function App() {
                 <UserInfo books={books} currUser={userId} userData={userData} />
               }
             />
+            <Route
+              path="search/:option/:search"
+              element={<Search books={books} />}
+            />
           </Routes>
         </div>
       </div>
