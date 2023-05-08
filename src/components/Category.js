@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
+import { db } from "../firebase";
 import "./CSS/category.css";
+
 import categoryLogo from "./images/category.png";
 import science from "./images/Categories/science.png";
 import programming from "./images/Categories/programming.png";
@@ -7,21 +10,10 @@ import math from "./images/Categories/math.png";
 import literature from "./images/Categories/literature.png";
 import novel from "./images/Categories/novel.png";
 import growth from "./images/Categories/growth.png";
-import { NavLink, useParams } from "react-router-dom";
-import { db } from "../firebase";
 
 function Category({ books }) {
   const { catId } = useParams();
   const [category, setCategory] = useState([]);
-  useEffect(() => {
-    db.collection("categories")
-      .doc(catId)
-      .get()
-      .then((doc) => setCategory(doc.data()?.books));
-  }, [catId]);
-
-  console.log(category);
-
   const categoryImg = {
     science: science,
     programming: programming,
@@ -30,6 +22,13 @@ function Category({ books }) {
     novel: novel,
     literature: literature,
   };
+
+  useEffect(() => {
+    db.collection("categories")
+      .doc(catId)
+      .get()
+      .then((doc) => setCategory(doc.data()?.books));
+  }, [catId]);
 
   return (
     <section className="bookWebPage">
@@ -61,12 +60,7 @@ function Category({ books }) {
             <p>Literature</p>
           </NavLink>
         </div>
-        <img
-          src={categoryLogo}
-          alt="recommend logo"
-          width={300}
-          style={{ marginTop: "-25px" }}
-        />
+        <img src={categoryLogo} alt="recommend logo" width={300} />
       </div>
 
       <div>
@@ -80,14 +74,18 @@ function Category({ books }) {
         )}
 
         <div id="bookByCategory">
-          {category?.map((id) => {
+          {category?.map((id, key) => {
             let bName = books[id]?.name;
             if (bName?.length > 21) {
               bName = bName.substring(0, 20) + "...";
             }
 
             return (
-              <NavLink to={`/book/${id}`} className="bookOverview">
+              <NavLink
+                to={`/book/${id}`}
+                target="_blank"
+                className="bookOverview"
+                key={key}>
                 <img src={books[id]?.bookFront} alt="book" />
                 <h2>{bName}</h2>
                 <button>₹{books[id]?.price}</button>
