@@ -10,6 +10,7 @@ import math from "./images/Categories/math.png";
 import literature from "./images/Categories/literature.png";
 import novel from "./images/Categories/novel.png";
 import growth from "./images/Categories/growth.png";
+import category_select from "./images/Categories/category_select.png";
 
 function Category({ books }) {
   const { catId } = useParams();
@@ -70,7 +71,12 @@ function Category({ books }) {
             <p>{catId[0].toUpperCase() + catId.substring(1)}</p>
           </div>
         ) : (
-          <h2>Select any category to browse books</h2>
+          <div className="category_select">
+            <img src={category_select} alt="category" />
+            <p>
+              SELECT <br /> CATEGORY <br /> to BROWSE <br /> BOOKS
+            </p>
+          </div>
         )}
 
         <div id="bookByCategory">

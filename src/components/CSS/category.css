@@ -37,6 +37,22 @@
     transform: scale(1.04);
 }
 
+.category_select{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+}
+
+.category_select img{
+    width: 290px;
+}
+
+.category_select p{
+    font-size: 32px;
+    font-weight: bold;
+}
+
 #bookByCategoryHead{
     align-items: center;
     column-gap: 10px;
