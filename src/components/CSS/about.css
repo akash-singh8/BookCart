@@ -111,3 +111,21 @@
     font-weight: bold;
     font-size: 18px;
 }
+
+
+/* Responsiveness */
+
+@media only screen and (max-width: 860px) {
+    #aboutOptions {
+        align-items: flex-end;
+        flex-direction: column;
+        row-gap: 12px;
+        margin-right: 3%;
+    }
+
+    .aboutContent{
+        padding: 28px 32px;
+        width: 94%;
+        margin-left: 3%;
+    }
+}
