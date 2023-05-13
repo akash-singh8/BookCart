@@ -67,3 +67,29 @@ select{
 #topNavSearchBtn:active{
     transform: translateY(0);
 }
+
+
+/* Responsiveness */
+
+@media only screen and (max-width: 860px) {
+    #topNavSearch input{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #topNavSearch input{
+        width: 250px;
+    }
+
+    #topNavSearchBtn{
+        width: 18px;
+        padding-bottom: 2px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    #topNavSearch input{
+        width: 200px;
+    }
+}
